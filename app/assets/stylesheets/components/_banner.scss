@@ -1,0 +1,13 @@
+.banner {
+  background-image: url('https://source.unsplash.com/1600x900/?movie');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 150px 0;
+  text-align: center;
+
+  p {
+    font-style: italic;
+    font-size: 18px;
+  }
+}
