@@ -1,4 +1,4 @@
-<div class="banner mb-4" style="background-image: url('<%= @list.image_url %>')">
+<div class="banner mb-4" style="background-image: url('<%= image_path @list.image_url %>')">
   <% if @list.bookmarks.count <= 1 %>
     <h6 class="btn-movies-counter"><%= @list.bookmarks.count %> movie</h6>
   <% else %>
@@ -15,7 +15,7 @@
   <div class="movie-cards">
     <% @list.bookmarks.each do |bookmark| %>
       <div class="movie-card d-flex flex-column">
-        <img src="<%= bookmark.movie.poster_url %>" alt="movie poster">
+        <%= image_tag bookmark.movie.poster_url, alt: "movie poster" %>
         <div class="movie-card-body mb-4">
           <div class="movie-card-title d-flex justify-content-start align-items-center">
             <h6 class="movie-title mr-2"><%= bookmark.movie.title %></h6>

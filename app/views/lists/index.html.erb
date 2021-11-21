@@ -1,4 +1,4 @@
-<div class="banner mb-4" style="background-image: url('https://source.unsplash.com/1600x900/?movie')">
+<div class="banner mb-4" style="background-image: url('<%= image_path "https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" %>')">
   <h1>Save any kind of movies</h1>
   <p>Create your personal watchlist</p>
 </div>
@@ -11,7 +11,7 @@
 
   <div class="list-cards">
     <% @lists.each do |list| %>
-      <div class="list-card" style="background-image: url('<%= list.image_url %>')">
+      <div class="list-card" style="background-image: url('<%= image_path list.image_url %>')">
         <%= link_to list.name, list_path(list) %>
       </div>
     <% end %>
