@@ -27,3 +27,62 @@
     }
   }
 }
+
+.movie-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+}
+
+.movie-card {
+  height: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  img {
+    height: 250px;
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+
+.movie-card-body {
+  margin: 0;
+  height: 150px;
+  padding: 16px;
+}
+
+.movie-card-footer {
+  padding: 16px;
+}
+
+.movie-card-title {
+  h6 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.movie-card-text {
+  p {
+    margin: 0;
+    font-size: 14px;
+    color: $gray;
+  }
+}
+
+.title {
+  padding: 0px 16px;
+  margin: 0;
+}
+
+.movie-title {
+  font-weight: bold;
+}
+
+.fa-star {
+  color: $yellow
+}

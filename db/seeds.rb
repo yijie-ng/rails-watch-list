@@ -19,10 +19,10 @@ puts 'Database is clean!'
 puts 'Creating database...'
 results.each do |result|
   movie = Movie.create!(
-    title: result['original_title'],
+    title: result['title'],
     overview: result['overview'],
     poster_url: "https://image.tmdb.org/t/p/w500#{result['poster_path']}",
-    rating: result['vote_average']
+    rating: result['vote_average'].to_f
   )
   puts "Movie #{movie.id} is created!"
 end

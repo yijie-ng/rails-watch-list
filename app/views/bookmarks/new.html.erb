@@ -1,6 +1,16 @@
-<h3>Add a movie</h3>
-<%= simple_form_for [ @list, @bookmark ] do |f| %>
-  <%= f.association :movie %>
-  <%= f.input :comment, as: :text %>
-  <%= f.submit %>
-<% end %>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-6 m-auto bg-light">
+      <div class="bookmark-form ml-3 mr-3 mt-3 mb-4">
+        <h1>Add a movie</h1>
+        <div class="mt-3">
+          <%= simple_form_for [ @list, @bookmark ] do |f| %>
+            <%= f.association :movie, input_html: { multiple: true, class: 'select2' }, include_hidden: false %>
+            <%= f.input :comment, as: :text %>
+            <%= f.submit nil, class: "btn btn-success" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
