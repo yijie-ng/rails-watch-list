@@ -38,4 +38,31 @@
       </div>
     <% end %>
   </div>
+
+  <div class="reviews border-top mt-4 mb-4">
+    <div class="row mt-4">
+      <div class="col-6">
+        <h3>Reviews</h3>
+        <% @list.reviews.each do |review| %>
+          <div class="review border-bottom">
+            <p><%= review.rating %><i class="fas fa-star"></i></p>
+            <p><%= review.comment %></p>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="col-6 m-auto bg-light">
+        <div class="bookmark-form ml-3 mr-3 mt-3 mb-4">
+          <h3>Add your review</h3>
+          <div class="mt-3">
+            <%= simple_form_for [ @list, @review ] do |f| %>
+              <%= f.input :comment %>
+              <%= f.input :rating, min_max: true %>
+              <%= f.submit nil, class: "btn btn-success" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
