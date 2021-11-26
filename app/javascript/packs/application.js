@@ -9,9 +9,14 @@ require("@rails/activestorage").start()
 require("channels")
 import 'bootstrap';
 import { initSelect2 } from 'components/init_select2';
+import { initJqueryBarRating } from 'components/init_jquery_bar_rating';
 
 document.addEventListener("turbolinks:load", function () {
   initSelect2();
+});
+
+document.addEventListener("turbolinks:load", function () {
+  initJqueryBarRating();
 });
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
