@@ -9,15 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   </head>
 
   <body>
     <%= render "components/navbar" %>
     <%= yield %>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <%= javascript_include_tag "/assets/jquery.barrating.min" %>
-    <%# <script src="jquery.barrating.min.js"></script> %>
   </body>
 </html>
